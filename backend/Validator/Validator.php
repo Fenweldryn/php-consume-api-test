@@ -15,7 +15,7 @@ class Validator
         }
 
         if (!empty($missingFields)) {
-            http_response_code(400);
+            http_response_code(422);
             echo json_encode(['error' => 'Missing required fields: ' . implode(', ', $missingFields)]);
             exit;
         }
