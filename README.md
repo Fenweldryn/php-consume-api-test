@@ -2,17 +2,19 @@
 Develop an application to consume the provided API and complete the stories.
 
 ## How to run this project
-run
+docker is required to run this project.
+
+if you have docker installed, run:
 ```
 docker-compose up
 ```
-the url for the app will be available at
+the app will be available at:
 ```
 http://localhost:8080/events
 ```
 
 ## Stack
-This project uses VueJS for the frontend and php for the backend to consume the provided API.
+This project uses VueJS for the frontend and php for the backend to consume the provided API. This project was conteinerized using docker.
 
 ## User Stories
 ### As a User, I want to see a list of all events
