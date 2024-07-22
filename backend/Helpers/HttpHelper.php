@@ -65,7 +65,6 @@ class HttpHelper
             'Authorization: Bearer ' . $this->getToken()
         ]);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-        curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode(['$top' => 10, '$skip' => 0]));
         curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'GET');
         $result = curl_exec($ch);
         curl_close($ch);
