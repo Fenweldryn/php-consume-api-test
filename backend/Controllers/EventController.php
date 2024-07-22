@@ -2,13 +2,12 @@
 
 namespace App\Controllers;
 
-use App\Controller;
 use App\Services\EventsService;
 use App\Helpers\RequestHelper;
 use App\Validator\Event\CreateRequestValidator;
 use App\Validator\Event\ShowRequestValidator;
 
-class EventController extends Controller
+class EventController
 {
     public function index()
     {

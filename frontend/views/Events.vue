@@ -55,7 +55,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr v-for="event in events"  class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                        <tr v-for="event in this.events"  class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
                             <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                                 {{ event.title }}
                             </th>
@@ -153,6 +153,10 @@
         async getEvents() {
             try {
                 this.loading = true;
+                if (this.pagination.filter !== "") {
+                    this.pagination.skip = 0;
+                    this.pagination.top = 0;
+                }
                 const response = await axios.get("http://localhost:8000/events", {
                     params: {
                         top: this.pagination.top,
